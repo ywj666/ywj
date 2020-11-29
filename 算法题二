@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int M=0,N,i,j;
+	printf("输入数组个数N:");
+	scanf("%d",&N);
+	int arr[N];
+    printf("输入数组数值:\n");
+	for(i=0;i<N;i++)
+	{
+	printf("arr[%d]=",i);
+	scanf("%d",&arr[i]);
+    }
+	for(j=0;j<N;j++)
+	{
+    if(arr[j]%2!=1) M=0;   //判断arr[j]是否为偶数 
+	else
+	{
+    M++;
+	if(M>2)
+    {printf("ture");   //连续奇数超过2个输出ture 
+    break;}
+    }
+    }
+    if(M<3) printf("false");   //连续奇数少于3个输出false 
+	return 0;
+}
