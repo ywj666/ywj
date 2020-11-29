@@ -1,0 +1,42 @@
+#include<iostream>
+int main()
+{
+	using namespace std;
+	int M,N,i,j;
+	printf("输入矩阵行列数N,M:");
+	scanf("%d%d",&N,&M);
+	int a[N][M],b[M][N];
+	printf("输入矩阵数值:\n"); 
+	for(i=0;i<N;i++)
+	{
+	for(j=0;j<M;j++)
+	{
+	printf("a[%d][%d]=",i,j);
+	scanf("%d",&a[i][j]);
+	}
+	}
+	printf("原矩阵a:\n");
+	for(i=0;i<N;i++)   //输出原矩阵a，给转置矩阵b赋值 
+	{
+	printf("[");
+	for(j=0;j<M;j++)
+	{
+	printf("%3d",a[i][j]);
+	b[j][i]=a[i][j];
+	}
+	printf("  ]");
+	cout << endl;
+	}
+	printf("转置矩阵b:\n");
+	for(i=0;i<M;i++)
+	{
+	printf("[");
+	for(j=0;j<N;j++)
+	{
+	printf("%3d",b[i][j]);
+	}
+	printf("  ]");
+	cout << endl;
+	}
+	return 0;
+ } 
